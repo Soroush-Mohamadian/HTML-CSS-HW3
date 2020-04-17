@@ -1,307 +1,271 @@
 @font-face {
-    font-family: "Shabnam";
+    font-family: Shabnam;
+    src: url('./Assets//Fonts/Shabnam.eot');
+    src: url('./Assets//Fonts/Shabnam.woff') format('woff'),
+         url('./Assets/Fonts/Shabnam.ttf') format('truetype');
     font-weight: normal;
-    }
+}
+  
+@font-face {
+    font-family: Comfortaa;
+    src: url('Comfortaa-Regular');
+    src: url('./Assets/Fonts/Comfortaa-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
 
+
+body {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+
+}
+
+
+
+@media screen and (min-width: 769px) { 
+    
     body {
+        height: 100vh;
+        display: flex;
+        flex-direction: row-reverse;
         margin: 0;
+        padding: 0;
+    }
+    
+     /* RIGHT SIDE */    
+    
+     .rightPanel {
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 0%;
+        align-items: center;
+        font-family: 'Shabnam';
         direction: rtl;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;
-        font-family: "Shabnam";
-        min-width: 1000px;
-        min-height: 600px;
+        min-width: 30%;
     }
 
-    * {
-        box-sizing: border-box;
-    }
-
-    .panel {
-        width: 100%;
-        height: 100vh;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-		padding-top:70px;
-    }
-
-    .panel .date {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .panel .date .text1 {
-        color: rgb(126, 96, 228);
-        font-size: 26pt;
-        text-align: center;
-    }
-
-    .panel .date .text2 {
-        color: rgb(126, 96, 228);
-        text-align: center;
-    }
-
-    .panel .user {
-        display: flex;
-        align-items: center;
-        margin-top:30px;
-        padding-right:50px;
-    }
-
-    .panel .user img {
-        width:50px;
-        height:50px;
-        border-radius: 50%;
-        margin-left:10px; 
-    }
-
-    .panel .nav{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding-right:40px ;
-        padding-left:40px ;
-        margin-top:50px; 
-    }
-
-    .panel .nav .tab{
-        font-size:14pt;
-        color:rgb(181, 181, 181);
-        margin-bottom:20px; 
-        display: flex;
-        justify-content:space-between;
-        align-items: center;
-    }
-
-    .panel .nav .subTab {
-        color: rgb(181, 181, 181) ;
-        margin-bottom: 20px;
-        font-size: 12pt; ;
-        padding-right:20px;
-    }
-
-    .panel .nav .tab i{
-        margin-left:5px; 
-    }
-
-    .panel .nav .tab .number{
-        color: white;
-        background-color:red;
-        border-radius:5px;
-        width: 20px;
-        text-align:center;
-        font-size:10pt;
-    }
-
-    .panel .nav .active{
-        color:rgb(126,96,228);
-    }
-
-    .dashboard {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .box {
+        width: 60%;
+        height: 70%;
         padding: 20px;
-        background-color: rgb(231, 231, 231);
-        width: 83vw;
-        height: 100vh;
     }
-
-    .dashboard .header {
+    .box div {
+        margin: 30px 0;
+    }
+    
+    
+    .text1 {
+        font-weight: bold;
+        font-size: 20px;
+        color: rgb(0, 136, 221);
+        margin-bottom: 160px !important;
+    }
+    
+    /* INput box */
+    
+    .input-box {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 13vh;
+        justify-content: flex-end;
+        color: rgb(194, 194, 194);
+    }
+    input {
+        font-size: 18px;
+        padding-bottom: 10px;
+        font-family: 'Shabnam';
+        border: transparent;
+        background: transparent;
+        border-bottom: 1px rgb(194, 194, 194) solid;
+       
+    }
+    
+    input::placeholder {
+        color: rgb(194, 194, 194);
+    }
+    
+    
+    
+    .input {
+        margin: 1rem 0;
         width: 100%;
     }
-
-    .dashboard .header .card {
-        width: 19vw;
-        height: 100%;
-        border-radius: 5px;
-        display: flex;
-        flex-direction: row;
+    .icon {
+        position: absolute;
+        align-self: center;
+        font-size: 1.5rem !important;
+    }
+    
+    .button {
+        box-shadow: 0 2px 2px 1px rgba(194, 194, 194, .8);
+        width: 100%;
+        color: white;
+        font-size: 20px;
+        font-family: 'Shabnam';
+        background-color: #0093ED;
+        border-color: transparent;
+        border-radius: 8px;
+        height: 60px;
     }
 
-    .dashboard .header .card .right {
-        height: 100%;
-        width: 76vw;
-        background-color: white;
-        padding: 15px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 0 5px 5px 0;
+    .button:hover{
+        background-color: rgb(0, 136, 221)
     }
+  
 
-    .dashboard .header .card .left {
-        height: 100%;
-        width: 24vw;
+    
+    
+    /* Left side */
+    .animated {
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 5px 0 0 5px;
+        height: inherit;
+        width:52%;
+        background: rgb(40,187,238);
+        background: linear-gradient(45deg, rgb(40, 159, 238) 10%, rgba(152,240,218,1) 86%);
     }
-
-    .dashboard .header .card .left img {
-        transform: scale(0.9);
-        margin-bottom: 5px;
-    }
-
-    .dashboard .header .card .right .text1 {
-        color: rgb(181, 181, 181);
-    }
-
-    .dashboard .header .card .right .text2 {
-        font-size: 16pt;
-        font-weight: bold;
-    }
-
-    .dashboard .header .card .right .text3 {
-        color: rgb(181, 181, 181);
-    }
-
-    .dashboard .main {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 45vh;
-        width: 100%;
-    }
-
-    .dashboard .main .right {
-        height: 100%;
-        width: 60.95vw;
-        border-radius: 5px;
-        background:linear-gradient(to bottom right,rgb(126,96,228),rgb(97,114,228));
-    }
-
-    .dashboard .main .left {
-        height: 100%;
-        width: 37.4vw;
-        margin-right: 30px;
-        border-radius: 5px;
-        padding:30px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .dashboard .main .left .header{
-        display: flex;
-        flex-direction:row;
-        justify-content: space-between;
-        align-items: center;
-        width:100%;
-        height:20%;
     
+    /* Radar effect */
+    .radar {
+        position: absolute;
+        height: inherit;
+        width: inherit;
+        overflow: hidden;
     }
-
-    .dashboard .main .left .header .text{
-        border-bottom:2px rgb(126,96,228) solid;
-        padding:5px;
-        font-size:14pt;
-    }
-
-    .dashboard .main .left .header button{
-        font-size:12pt;
-        padding:8px;
-        background-color:white;
-        border-radius:5px;
-        border:1px gray solid;
-    }
-
-    .dashboard .main .left .main{
-        width:100%;
-        height:100%;
-    }
-
-    .dashboard .footer {
-        height: 30vh;
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .dashboard .footer .right {
-        height: 100%;
-        width: 60.95vw;
-        margin-left: 31px;
-        border-radius: 5px;
-        background-color: white;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .dashboard .footer .right .header{
-        height:30vh;
     
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        padding-right:30px;
+    .radar img {
+        position: relative;
+        height: inherit;
+        top: 50%;
+        left: 50%;
+        opacity: .4;
+        transform-origin: 0% 0%;
+        animation: clockwise 10s linear infinite ;
     }
-
-    .dashboard .footer .right .header .tab{
-        margin-left:10px;
-        font-size:12pt; 
-        padding:10px;
-        color: rgb(181, 181, 181);
-        display:flex;
-        flex-direction: row;
-        align-items:center;
-        justify-content: space-between; 
+    
+    .footer-message {
+        position: fixed;
+        align-self: flex-end;
+        justify-self: center;
+        font-family: 'Comfortaa';
+        color: white;
     }
-
-    .dashboard .footer .right .header .active{
-        border-bottom:2px rgb(126,96,228) solid;
-        padding:5px; 
-        font-size:16pt; 
-        font-weight:bold;
+    
+    @keyframes clockwise {
+        from { transform: rotate(0deg);     }
+        to   { transform: rotate(360deg);    }
     }
+    
+    
+    /* Faded rings effect */
+    
 
-    .dashboard .footer .right .header .tab .number{
-        font-size:10pt;
-        background-color: rgb(238,238, 238);
-        width:30px;
-        text-align: center;
-        margin-right:5px;
-        border-radius: 3px;
+    
+        
     }
-
-    .dashboard .footer .right .main{
-        height: 60vh;
-    }
-
-    .dashboard .footer .left {
-        height: 100%;
-        width: 38.5vw;
-        border-radius: 5px;
+    
+    @keyframes pulse {
+        from {
+            transform: scale(0);
+            opacity: .2;
+        } to { 
+            transform: scale(1);
+            opacity: 0;
+        }
+    } 
+    
+    .ring1 {
+        position: absolute;
+        overflow: hidden;
+        width: inherit;
+        height: inherit;
         background-color: white;
-        display: flex;
-        flex-direction: column;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: .6s;
+        animation-timing-function: ease;
+        
     }
-    .dashboard .footer .left .header{
-        border-bottom:1px silver solid;
-        height:30vh;
-        display: flex;
-        align-items: center;
-        padding-right:30px;
+    
+    .ring2 {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 1.2s;
+        animation-timing-function: ease;
+
+    }
+    
+    .ring3 {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 1.8s;
+        animation-timing-function: ease;
+    }
+    
+    .ring4 {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 2.4s;
+        animation-timing-function: ease;
+        
     }
 
-    .dashboard .footer .left .header .text{
-        border-bottom:2px rgb(126,96,228) solid; 
-        padding:5px; 
-        font-size:16pt; 
+    .ring5 {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 3s;
+        animation-timing-function: ease;
+        
+    }
+    
+    .ring6 {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 3.6s;
+        animation-timing-function: ease;
+        
+    }
+        
+    .ring7 {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background-color: white;
+        border-radius: 100%;
+        border-color: transparent;
+        animation: pulse 7s linear infinite;
+        animation-delay: 4.2s;
+        animation-timing-function: ease;
+        
     }
 
-    .dashboard .footer .left .main{
-        width:100%;
-        height:60vh;
-    }
+    
+    
+   
